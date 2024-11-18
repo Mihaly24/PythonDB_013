@@ -202,6 +202,7 @@ tree.heading("Fisika", text="Fisika")
 tree.heading("Bahasa Inggris", text="Bahasa Inggris")
 tree.heading("Prediksi", text="Prediksi")
 tree.grid(row=5, column=0, columnspan=3, padx=10, pady=10)
+tree.bind("<ButtonRelease-1>", fill_inputs_from_table)
 
 # Menyatakan posisi teks di setipa kolom ke tengah
 # Mengatur posisi isi tabel di tengah
@@ -209,6 +210,5 @@ for col in columns:
     tree.heading(col, text=col.capitalize())
     tree.column(col, anchor="center")
 
-tree.bind("<ButtonRelease-1>", fill_inputs_from_table)
 
 root.mainloop()
